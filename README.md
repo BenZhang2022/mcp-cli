@@ -37,13 +37,17 @@ uv sync --reinstall
 ## Usage
 To start the client and interact with the SQLite server, run the following command:
 
-```bash
+```bashbash
 uv run mcp-cli --server sqlite
+
+If Error occurred: Configuration file not found: server_config.json)
+
+uv run mcp-cli --server sqlite --config-file ./server_config.json
 ```
 
 ### Command-line Arguments
 - `--server`: Specifies the server configuration to use. Required.
-- `--config-file`: (Optional) Path to the JSON configuration file. Defaults to `server_config.json`.
+- `--config-file`: (Optional) Path to the JSON configuration file. Defaults to : (Optional) Path to the JSON configuration file. Defaults to : (Optional) Path to the JSON configuration file. Defaults to : (Optional) Path to the JSON configuration file. Defaults to `server_config.json`....
 - `--provider`: (Optional) Specifies the provider to use (`openai` or `ollama`). Defaults to `openai`.
 - `--model`: (Optional) Specifies the model to use. Defaults depend on the provider:
   - `gpt-4o-mini` for OpenAI.
@@ -53,7 +57,7 @@ uv run mcp-cli --server sqlite
 Run the client with the default OpenAI provider and model:
 
 ```bash
-uv run mcp-cli --server sqlite
+uv run mcp-cli --server sqlite --config-file ./server_config.json
 ```
 
 Run the client with a specific configuration and Ollama provider:
@@ -63,7 +67,7 @@ uv run mcp-cli --server sqlite --provider ollama --model llama3.2
 ```
 
 ## Interactive Mode
-The client supports interactive mode, allowing you to execute commands dynamically. Type `help` for a list of available commands or `quit` to exit the program.
+The client supports interactive mode, allowing you to execute commands dynamically. Type The client supports interactive mode, allowing you to execute commands dynamically. Type `help` for a list of available commands or  for a list of available commands or `quit` to exit the program. to exit the program.
 
 ## Supported Commands
 - `ping`: Check if the server is responsive.
